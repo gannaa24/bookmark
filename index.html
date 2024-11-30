@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookmark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+   <main class="container ">
+    <header class="p-3 d-flex justify-content-center align-items-center">
+        <h1 class="text-center pacifico-regular p-5 display-5 position-relative mx-5">Bookmarker</h1>
+    </header>
+    <section>
+        <div class="container my-4 inputs py-4 d-flex flex-column">
+            <h2 class="text-center righteous-regular fs-3"><i class="fa-solid fa-bookmark"></i>Bookmark Your favourite sites<i class="fa-solid fa-bookmark"></i></h2>
+            <label for="siteName" class="my-3 fw-semibold"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+            <input class="form-control my-2" oninput="validation(this)" id="siteName" type="text" placeholder="Bookmark Name" aria-label="default input example">
+            <label for="siteUrl" class="fw-semibold"><i class="fa-solid fa-link"></i> Site URL</label>
+            <input class="form-control my-2" oninput="validation(this)" id="siteUrl" type="text" placeholder="Website URL" aria-label="default input example">
+            <button type="button" onclick="addBookmark()" class="btn btn-submit px-5 align-self-center">Submit</button>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <table class="table text-center mt-4 bg-light">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <Th>Delete</Th>
+                    </tr>
+                </thead>
+                <tbody id="contentTable"></tbody>
+            </table>
+        </div>
+    </section>
+
+   </main>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/8d1a211f3f.js" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
